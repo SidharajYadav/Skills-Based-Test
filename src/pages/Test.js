@@ -17,12 +17,15 @@ const Test = () => {
         setScore(null);
     };
 
-    const fetchQuestions = () => {
+    const fetchQuestions = async () => {
         setLoading(true);
-        fetchExternalQuestions(category).then(fetchedQuestions => {
+        try {
+            const fetchedQuestions = await fetchExternalQuestions(category);
             setQuestions(fetchedQuestions);
+        }
+         finally {
             setLoading(false);
-        });
+        }
     };
 
     const handleAnswerChange = (questionIndex, answer) => {
