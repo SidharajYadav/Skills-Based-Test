@@ -8,6 +8,7 @@ const Header = () => {
                 <nav className="flex space-x-4">
                     <a href="/" className="text-white hover:text-gray-200">Home</a>
                     <a href="/test" className="text-white hover:text-gray-200">Take Test</a>
+                    <a href="/about" className="text-white hover:text-gray-200">About</a>
                 </nav>
                 <div className="flex space-x-2">
                     <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Login</button>
