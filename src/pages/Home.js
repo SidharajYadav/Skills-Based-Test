@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="container mx-auto p-4">
             {/* Hero Section */}
-            <section className="text-center bg-blue-600 text-white py-16">
+            <section className="text-center bg-purple-600 text-white py-16">
                 <h1 className="text-4xl font-bold mb-4">Welcome to the Skill Test Website</h1>
                 <p className="mb-4">Enhance your skills with our expertly crafted tests</p>
                 <button className="bg-white text-blue-600 font-semibold py-2 px-4 rounded">Take Test</button>
