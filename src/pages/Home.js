@@ -1,18 +1,5 @@
-// import React from 'react';
-
-// const Home = () => {
-//     return (
-//         <div className="container mx-auto p-4">
-//             <h2 className="text-2xl font-bold">Welcome to the Skill Test Website</h2>
-//             <p>Click "Take Test" to start the test.</p>
-            
-//         </div>
-//     );
-// };
-
-// export default Home;
 import React from 'react';
-
+import 'animate.css';
 
 const Home = () => {
     return (
@@ -50,17 +37,17 @@ const Home = () => {
             <section className="my-8">
                 <h2 className="text-2xl font-bold mb-4">How It Works</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                    <div>
+                    <div className="border p-4 animate__animated animate__fadeInLeft">
                         <img src="/images/test1.jfif" alt="Choose Test" className="mx-auto mb-2 w-32 h-32 object-cover"/>
                         <h3 className="font-semibold text-xl">Choose a Test</h3>
                         <p>Pick a test from our wide range of skill categories.</p>
                     </div>
-                    <div>
+                    <div className="border p-4 animate__animated animate__fadeInUp">
                         <img src="/images/test2.avif" alt="Take Test" className="mx-auto mb-2 w-32 h-32 object-cover"/>
                         <h3 className="font-semibold text-xl">Take the Test</h3>
                         <p>Complete the test within the given time limit.</p>
                     </div>
-                    <div>
+                    <div className="border p-4 animate__animated animate__fadeInRight">
                         <img src="/images/test4.jfif" alt="Get Results" className="mx-auto mb-2 w-32 h-32 object-cover"/>
                         <h3 className="font-semibold text-xl">Get Results</h3>
                         <p>Receive your scores and see how you performed.</p>
