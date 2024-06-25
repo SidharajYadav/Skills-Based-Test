@@ -8,7 +8,7 @@ const Home = () => {
             <section className="text-center bg-purple-600 text-white py-16 animate__animated animate__fadeInUp">
                 <h1 className="text-4xl font-bold mb-4">Welcome to the Skill Test Website</h1>
                 <p className="mb-4">Enhance your skills with our expertly crafted tests</p>
-                <button className="bg-white text-blue-500 font-semibold py-2 px-4 rounded animate__fadeInUp">Take Test</button>
+                <button  className="bg-white text-blue-500 font-semibold py-2 px-4 rounded animate__fadeInUp">Take Test</button>
             </section>
 
             {/* Featured Tests */}

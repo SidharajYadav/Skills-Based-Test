@@ -115,11 +115,12 @@ const Test = () => {
                 <>
                     {popupOpen && (
                         <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex justify-center items-center">
+                            
+                            <div className="bg-white p-4 rounded shadow-lg">
                             <div className="text-right mt-2 text-gray-600">
                                     Time left: {timeLeft} seconds
                                 </div>
-                            <div className="bg-white p-4 rounded shadow-lg">
-                                <h2 className="text-2xl font-bold mb-4">Question {currentQuestionIndex + 1}\{currentQuestion.length}</h2>
+                                <h2 className="text-2xl font-bold mb-4">Question {currentQuestionIndex + 1}\10</h2>
                                 <h3 className="text-xl mb-2">{decodeHtml(currentQuestion.question)}</h3>
                                 {currentQuestion.options.map((option) => (
                                     <label key={option} className="block mb-1">
