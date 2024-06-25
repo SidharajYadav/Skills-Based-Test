@@ -10,8 +10,8 @@ const Test = () => {
     const [score, setScore] = useState(null);
     const [loading, setLoading] = useState(false);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [popupOpen, setPopupOpen] = useState(false); // State to manage popup visibility
-    const [timeLeft, setTimeLeft] = useState(10); // Initial time left for each question
+    const [popupOpen, setPopupOpen] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(10);
 
     const handleCategorySelect = (selectedCategory) => {
         setCategory(selectedCategory);
@@ -44,25 +44,29 @@ const Test = () => {
             }
         });
         setScore(newScore);
-        setPopupOpen(false); // Close popup after submitting
+        setPopupOpen(false);
     };
 
     const handleStartTest = () => {
-        setCurrentQuestionIndex(0); // Start from the first question
-        setPopupOpen(true); // Open the popup
-        setTimeLeft(10); // Reset the timer for each question
+        setCurrentQuestionIndex(0);
+        setPopupOpen(true);
+        setTimeLeft(10);
     };
 
     const handleNextQuestion = () => {
-        setCurrentQuestionIndex(currentQuestionIndex + 1); // Move to the next question
-        setTimeLeft(10); // Reset timer for the next question
+        if (currentQuestionIndex < questions.length - 1) {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+            setTimeLeft(10);
+        } else {
+            handleSubmit();
+        }
     };
 
     useEffect(() => {
         if (category) {
             fetchQuestions();
         }
-    }, [category]); // Include any dependencies here
+    }, [category]);
 
     useEffect(() => {
         let timer;
@@ -74,7 +78,7 @@ const Test = () => {
             handleNextQuestion();
         }
         return () => clearTimeout(timer);
-    }, [timeLeft, popupOpen]); // Timer effect
+    }, [timeLeft, popupOpen]);
 
     if (loading) {
         return <div className="text-center mt-8">Loading...</div>;
@@ -114,7 +118,7 @@ const Test = () => {
                             <div className="bg-white p-4 rounded shadow-lg">
                                 <h2 className="text-2xl font-bold mb-4">Question {currentQuestionIndex + 1}</h2>
                                 <h3 className="text-xl mb-2">{decodeHtml(currentQuestion.question)}</h3>
-                                {currentQuestion.options.map((option, index) => (
+                                {currentQuestion.options.map((option) => (
                                     <label key={option} className="block mb-1">
                                         <input
                                             type="radio"
@@ -135,12 +139,9 @@ const Test = () => {
                                     </button>
                                     <button
                                         className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                                        onClick={() => {
-                                            setPopupOpen(false);
-                                            setTimeLeft(10); // Reset timer on closing popup
-                                        }}
+                                        onClick={handleNextQuestion}
                                     >
-                                        Skip
+                                        Next
                                     </button>
                                 </div>
                                 <div className="text-right mt-2 text-gray-600">

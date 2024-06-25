@@ -5,27 +5,27 @@ const Home = () => {
     return (
         <div className="container mx-auto p-4">
             {/* Hero Section */}
-            <section className="text-center bg-purple-600 text-white py-16">
+            <section className="text-center bg-purple-600 text-white py-16 animate__animated animate__fadeInUp">
                 <h1 className="text-4xl font-bold mb-4">Welcome to the Skill Test Website</h1>
                 <p className="mb-4">Enhance your skills with our expertly crafted tests</p>
-                <button className="bg-white text-blue-600 font-semibold py-2 px-4 rounded">Take Test</button>
+                <button className="bg-white text-blue-500 font-semibold py-2 px-4 rounded animate__fadeInUp">Take Test</button>
             </section>
 
             {/* Featured Tests */}
             <section className="my-8">
                 <h2 className="text-2xl font-bold mb-4">Featured Tests</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div className="border p-4 rounded">
+                    <div className="border p-4 rounded animate__animated animate__fadeInLeft">
                         <h3 className="font-semibold text-xl">Frontend Development</h3>
                         <p>Test your HTML, CSS, and JavaScript skills.</p>
                         <a href="/test" className="text-blue-600 hover:text-gray-600 underline mt-1">Take Test</a>
                     </div>
-                    <div className="border p-4 rounded">
+                    <div className="border p-4 rounded animate__animated animate__fadeInLeft">
                         <h3 className="font-semibold text-xl">Backend Development</h3>
                         <p>Evaluate your knowledge of server-side programming.</p>
                         <a href="/test" className="text-blue-600 hover:text-gray-600 underline mt-1">Take Test</a>
                     </div>
-                    <div className="border p-4 rounded">
+                    <div className="border p-4 rounded animate__animated animate__fadeInLeft">
                         <h3 className="font-semibold text-xl">Data Science</h3>
                         <p>Assess your proficiency in data analysis and machine learning.</p>
                         <a href="/test" className="text-blue-600 hover:text-gray-600 underline mt-1">Take Test</a>
@@ -56,7 +56,7 @@ const Home = () => {
             </section>
 
             {/* Testimonials */}
-            <section className="my-8 bg-gray-100 py-8">
+            <section className="my-8 bg-gray-100 py-8 animate__delay-2s">
                 <h2 className="text-2xl font-bold mb-4 text-center">What Our Users Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className="border p-4 rounded">

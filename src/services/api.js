@@ -1,14 +1,3 @@
-// import axios from 'axios';
-
-// export const fetchExternalQuestions = async (category) => {
-//     try {
-//         const response = await axios.post('http://localhost:3001/api/questions', { category });
-//         return response.data.questions;
-//     } catch (error) {
-//         console.error('Error fetching questions:', error);
-//         throw error;
-//     }
-// };
 import axios from 'axios';
 
 const API_BASE_URL = 'https://opentdb.com/api.php'; // Open Trivia Database API URL
@@ -43,20 +32,16 @@ export const fetchExternalQuestions = async (category) => {
 // Helper function to convert category label to API category code
 const getCategoryCode = (category) => {
     switch (category.toLowerCase()) {
-        case 'general knowledge':
-            return 9;
-        case 'entertainment: books':
-            return 10;
-        case 'entertainment: film':
-            return 11;
-        case 'science: computers':
-            return 18;
-        case 'science: nature':
-            return 17;
-        case 'science: mathematics':
-            return 19;
-        case 'sports':
-            return 21;
+        case 'frontend':
+            return 18; // Add the correct category code from OTDB
+        case 'backend':
+            return 19; // Add the correct category code from OTDB
+        case 'database':
+            return 11; // Example category code
+        case 'cloud':
+            return 12; // Example category code
+        case 'aws':
+            return 13; // Example category code
         default:
             return 9; // Default to General Knowledge if category not recognized
     }
