@@ -25,7 +25,7 @@ export const fetchExternalQuestions = async (category) => {
         return formattedQuestions;
     } catch (error) {
         console.error('Error fetching questions:', error);
-        throw error;
+        throw error; 
     }
 };
 
