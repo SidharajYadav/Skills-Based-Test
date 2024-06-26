@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="container mx-auto p-4">
             {/* Hero Section */}
-            <section className="text-center bg-purple-600 text-white py-16 animate__animated animate__fadeInUp">
+            <section className="text-center bg-purple-600 text-white py-16 animate__animated animate__fadeInDown">
                 <h1 className="text-4xl font-bold mb-4">Welcome to the Skill Test Website</h1>
                 <p className="mb-4">Enhance your skills with our expertly crafted tests</p>
                 <button  className="bg-white text-blue-500 font-semibold py-2 px-4 rounded animate__fadeInUp">Take Test</button>
@@ -40,7 +40,7 @@ const Home = () => {
                     <div className="border p-4 animate__animated animate__fadeInLeft">
                         <img src="/images/test1.jfif" alt="Choose Test" className="mx-auto mb-2 w-32 h-32 object-cover"/>
                         <h3 className="font-semibold text-xl">Choose a Test</h3>
-                        <p>Pick a test from our wide range of skill categories.</p>
+                        <p>Pick a test from our wide range of skill categories.</p> 
                     </div>
                     <div className="border p-4 animate__animated animate__fadeInUp">
                         <img src="/images/test2.avif" alt="Take Test" className="mx-auto mb-2 w-32 h-32 object-cover"/>
